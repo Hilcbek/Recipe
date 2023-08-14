@@ -25,7 +25,7 @@ export const SingleRecipe = () => {
             <div className='flex items-center justify-center xl:flex-row xs:flex-col xs:mt-96 xl:mt-0 w-full'>
                 <div className='w-full mr-3'>
                     <div className='w-full rounded-md shadow-md shadow-black/50'>
-                        <img className='w-full h-full rounded-md object-cover' src={single.image ? single?.image :  <PuffLoader color={color} loading={loading} size={120} aria-label="Loading Spinner" data-testid="loader"/>} alt="" />
+                        <img className='w-full h-full rounded-md object-cover' src={single?.image} alt="" />
                     </div>
                 </div>
                 <div className='w-full ml-3 xs:mt-5 xl:mt-0 flex items-center justify-center flex-col shadow-md shadow-black/50 p-2 rounded-md'>
