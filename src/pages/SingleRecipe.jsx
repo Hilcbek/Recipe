@@ -43,8 +43,8 @@ export const SingleRecipe = () => {
                                 ))
                             }
                         </ol>
-                        <h3 className={`${show ? 'flex' : 'hidden'} w-full break-words h-[357px] justify-start items-start overflow-y-scroll flex-col text-sm shadow-md shadow-black/40 p-2 rounded-md`} dangerouslySetInnerHTML={{ __html : single.summary}}></h3>
-                        <h3 className={`${show ? 'hidden' : 'flex'} w-full break-words h-[357px] justify-start items-start overflow-y-scroll flex-col text-sm`}  dangerouslySetInnerHTML={{ __html : single.instructions}}></h3>
+                        <h3 className={`${show ? 'flex' : 'hidden'} w-full break-words max-h-[357px] justify-start items-start overflow-y-scroll flex-col text-sm shadow-md shadow-black/40 p-2 rounded-md`} dangerouslySetInnerHTML={{ __html : single.summary}}></h3>
+                        <h3 className={`${show ? 'hidden' : 'flex'} w-full break-words max-h-[357px] justify-start items-start overflow-y-scroll flex-col text-sm`}  dangerouslySetInnerHTML={{ __html : single.instructions}}></h3>
                     </div>
                 </div>
             </div>
