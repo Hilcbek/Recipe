@@ -20,17 +20,17 @@ export const Header = () => {
         setSearch('')
     }
   return (
-    <div className='w-9/12 relative h-16 overflow-hidden mx-auto flex items-center justify-between py-2'>
+    <div className='xs:w-11/12 sm:w-11/12 lg:w-9/12 relative h-16 overflow-hidden mx-auto flex items-center justify-between py-2'>
         <Link to={'/'}>
-            <IoFastFoodOutline className='text-5xl' />
+            <IoFastFoodOutline className='xs:text-3xl g:text-5xl' />
         </Link>
-        <div className={`${show ? 'top-2' : '-top-96' } absolute flex left-28 transition items-center justify-start w-10/12`}>
-            <input onChange={(e) => setSearch(e.target.value)} type="text" placeholder='Enter any food name....' className='pl-10 p-3 font-light font-Poppins bg-[aliceblue] w-full border-solid border-[#009866] border-[1px] rounded-3xl outline-none' />
-            <button onClick={RedirectSearch} className='flex items-center justify-center w-10 h-10 hover:bg-black hover:text-white transition ml-2 rounded-full'><AiOutlineSearch className='text-xl' /></button>
+        <div className={`${show ? 'top-2' : '-top-96' } absolute flex xs:left-12 lg:left-[100px] transition items-center justify-start xs:w-9/12 lg:w-10/12`}>
+            <input onChange={(e) => setSearch(e.target.value)} type="text" placeholder='Enter any food name....' className='xs:text-xs lg:text-[16px] xs:pl-2 lg:pl-10 p-3 font-light font-Poppins bg-[aliceblue] w-full border-solid border-[#009866] border-[1px] rounded-3xl outline-none' />
+            <button onClick={RedirectSearch} className='flex items-center justify-center w-10 h-10 hover:bg-black hover:text-white transition xs:mr-1 lg:ml-2 rounded-full'><AiOutlineSearch className='text-xl' /></button>
         </div>
         <button onClick={CallerFun} className='flex items-center justify-center'>
-            {!show ? <CiMenuFries className='text-3xl cursor-pointer' /> : 
-            <TfiClose className='text-3xl cursor-pointer' />}
+            {!show ? <CiMenuFries className='xs:text-xl lg:text-3xl cursor-pointer' /> : 
+            <TfiClose className='xs:text-xl lg:text-3xl cursor-pointer' />}
         </button>
     </div>
   )
