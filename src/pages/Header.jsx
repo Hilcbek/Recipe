@@ -16,8 +16,12 @@ export const Header = () => {
         show ? dispatcher(setSearch(false )) : dispatcher(setSearch(true )) 
     }
     let RedirectSearch = () => {
-        navigate(`/search/${search}`)
-        setSearch('')
+        if(search.length > 0){
+            navigate(`/search/${search}`)
+            setSearch('')
+        }else{
+            alert('please enter search value!')
+        }
     }
   return (
     <div className='xs:w-11/12 sm:w-11/12 lg:w-9/12 relative h-16 overflow-hidden mx-auto flex items-center justify-between py-2'>
