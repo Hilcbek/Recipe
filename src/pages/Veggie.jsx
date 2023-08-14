@@ -14,9 +14,6 @@ export const Veggie = () => {
     let [loading,setLoading] = useState(false)
     let [color,setColor] = useState('#000')
     let [veggie,setVeggie] = useState([])
-    window.addEventListener('load' ,() => {
-        console.log('first')
-    })
     useEffect(() => {
         FetchVeggie()
     },[])
