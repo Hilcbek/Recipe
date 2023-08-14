@@ -28,7 +28,7 @@ export const Header = () => {
         <Link to={'/'}>
             <IoFastFoodOutline className='xs:text-3xl g:text-5xl' />
         </Link>
-        <div className={`${show ? 'top-2' : '-top-96' } absolute flex xs:left-12 lg:left-[100px] transition items-center justify-start xs:w-[80%] lg:w-10/12`}>
+        <div className={`${show ? 'top-2' : '-top-96' } absolute flex xs:left-12 lg:left-[100px] transition items-center justify-start xs:w-[84%] lg:w-10/12`}>
             <input onChange={(e) => setSearch(e.target.value)} type="text" placeholder='Enter any food name....' className='xs:text-xs lg:text-[16px] xs:pl-2 lg:pl-10 p-3 font-light font-Poppins bg-[aliceblue] w-full border-solid border-[#009866] border-[1px] rounded-3xl outline-none' />
             <button onClick={RedirectSearch} className='flex items-center justify-center w-10 h-10 hover:bg-black hover:text-white transition xs:mr-2 lg:ml-2 rounded-full'><AiOutlineSearch className='text-xl' /></button>
         </div>
