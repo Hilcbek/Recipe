@@ -29,7 +29,7 @@ export const Veggie = () => {
         }
         else{
             setLoading(true)
-            let res = await axios.get(`https://api.spoonacular.com/recipes/random?apiKey=${import.meta.env.VITE_FOOD_API_1 || import.meta.env.VITE_FOOD_API_2 || import.meta.env.VITE_FOOD_API_3}&number=9&tags=vegetarian`)
+            let res = await axios.get(`https://api.spoonacular.com/recipes/random?apiKey=${import.meta.env.VITE_FOOD_API_1 || import.meta.env.VITE_FOOD_API_2 || import.meta.env.VITE_FOOD_API_3}&number=50&tags=vegetarian`)
             localStorage.setItem("veggie",JSON.stringify(res.data.recipes))
             setVeggie(res.data.recipes)
             res.data.recipes && setLoading(false)

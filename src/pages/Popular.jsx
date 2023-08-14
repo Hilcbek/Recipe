@@ -26,7 +26,7 @@ export const Popular = () => {
         }
         else{
             setLoading(true)
-            let res = await axios.get(`https://api.spoonacular.com/recipes/random?apiKey=${import.meta.env.VITE_FOOD_API_1 || import.meta.env.VITE_FOOD_API_2 || import.meta.env.VITE_FOOD_API_3}&number=10`)
+            let res = await axios.get(`https://api.spoonacular.com/recipes/random?apiKey=${import.meta.env.VITE_FOOD_API_1 || import.meta.env.VITE_FOOD_API_2 || import.meta.env.VITE_FOOD_API_3}&number=50`)
             localStorage.setItem("popular",JSON.stringify(res.data.recipes))
             setPopular(res.data.recipes)
             res.data.recipes && setLoading(false)
