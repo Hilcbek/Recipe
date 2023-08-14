@@ -17,7 +17,7 @@ export const Header = () => {
         show ? dispatcher(setSearch(false )) : dispatcher(setSearch(true )) 
     }
     window.onload = () => {
-        window.scrollY > 30 ? setScroll(true) : setScroll(false)
+        Math.floor(window.scrollY) > 30 ? setScroll(true) : setScroll(false)
     }
     let RedirectSearch = () => {
         if(search.length > 0){
