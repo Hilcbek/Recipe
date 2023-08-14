@@ -28,7 +28,7 @@ export const Header = () => {
         }
     }
   return (
-    <div className={`${scroll ? 'fixed' : 'relative'} xs:w-11/12 sm:w-11/12 lg:w-9/12 h-16 overflow-hidden mx-auto flex items-center justify-between py-2`}>
+    <div className={`${scroll ? 'fixed top-0' : 'relative'} xs:w-11/12 sm:w-11/12 lg:w-9/12 h-16 overflow-hidden mx-auto flex items-center justify-between py-2`}>
         <Link to={'/'}>
             <IoFastFoodOutline className='xs:text-3xl g:text-5xl' />
         </Link>
