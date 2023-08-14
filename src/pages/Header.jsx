@@ -11,9 +11,13 @@ export const Header = () => {
     let dispatcher =useDispatch()
     let navigate = useNavigate()
     let [search,setSearch] = useState('')
+    let [scroll,setScroll] = useState(false)
     let CallerFun = () => {
         setShow(!show)
         show ? dispatcher(setSearch(false )) : dispatcher(setSearch(true )) 
+    }
+    window.onload = () => {
+        window.scrollY > 30 ? setScroll(true) : setScroll(false)
     }
     let RedirectSearch = () => {
         if(search.length > 0){
@@ -24,7 +28,7 @@ export const Header = () => {
         }
     }
   return (
-    <div className='xs:w-11/12 sm:w-11/12 lg:w-9/12 relative h-16 overflow-hidden mx-auto flex items-center justify-between py-2'>
+    <div className={`${scroll ? 'fixed' : 'relative'} xs:w-11/12 sm:w-11/12 lg:w-9/12 h-16 overflow-hidden mx-auto flex items-center justify-between py-2`}>
         <Link to={'/'}>
             <IoFastFoodOutline className='xs:text-3xl g:text-5xl' />
         </Link>
